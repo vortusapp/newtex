@@ -1,0 +1,104 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{ragged2e}
+\usepackage{fontspec}\setmainfont[
+ Path = "C:/TexFonts/fonts/",
+ UprightFont = *-Regular,
+ BoldFont = *-Bold,
+ ItalicFont = *-Italic,
+ BoldItalicFont = *-BoldItalic,
+ Ligatures = TeX
+]{NeueMontreal}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\RaggedRight
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+\usepackage{needspace}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{parskip}
+\usepackage{url}
+\usepackage{appendix}
+
+
+% Setting up the fonts
+\titleformat{\section}[block]
+  {\normalfont\Large\bfseries\Needspace{20em}}
+  {\thesection}
+  {1em}
+  {}
+
+\titleformat{\subsection}[block]
+  {\normalfont\large\bfseries\Needspace{20em}}
+  {\thesubsection}
+  {1em}
+  {}
+
+% Body Copy: 14pt size over 16.8pt leading
+\setstretch{1.2}  % 16.8/14 = 1.2
+\setlength{\parskip}{1em}
+
+
+\definecolor{darkgrey}{rgb}{0.2941, 0.2824, 0.2745}
+\definecolor{lightgrey}{rgb}{0.8588, 0.8392, 0.8196}
+\definecolor{warmblack}{rgb}{0.1373, 0.1216, 0.1255}
+\definecolor{shuttlewhite}{rgb}{0.9686, 0.9686, 0.9686}
+
+\lstset{language=VHDL,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{green},
+    morecomment=[l][\color{magenta}]{\#}
+}
+
+\newcommand{\myfigure}[3]{%
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{frame}
+        \includegraphics[width=0.8\textwidth]{#1}
+    \end{adjustbox}
+    \caption{#2}
+    \label{#3}
+\end{figure}
+}
+
+\begin{document}
+
+\begin{titlepage}
+  \pagecolor{lightgrey}
+  \color{darkgrey}
+\begin{flushleft}
+{\fontsize{24pt}{28.8pt}\selectfont\bfseries  EEEN 402 \\}
+{\fontsize{42pt}{42pt}\selectfont\bfseries Programable Digital Logic \\}
+{\fontsize{24pt}{28.8pt}\selectfont\bfseries Assignment 1 \\}
+\vspace*{\fill}
+{\fontsize{14pt}{16.8pt}\selectfont\bfseries Timothy Broadbent - 300587695\\}
+\vspace{0.5cm}
+{\fontsize{14pt}{16.8pt}\selectfont\today}
+
+\end{flushleft}
+
+
+
+
+\end{titlepage}
+\pagecolor{shuttlewhite}
+\color{warmblack}
+\clearpage
+
+\section{Introduction}
+
+
+\section{Conclusion}
+
+
+\end{document}
